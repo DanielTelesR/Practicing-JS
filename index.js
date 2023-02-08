@@ -1,29 +1,3 @@
-// Calculando a parcela de honorários do advogado.
-
-var danoMaterial = 2525;
-var danoMoral = 3500;
-var porcentagemAdv = 0.3;
-
-function calculoParcela(x, y) {
-  return (x + y) * porcentagemAdv;
-}
-
-console.log("O Advogado receberá: R$", calculoParcela(danoMaterial, danoMoral));
-
-// Calculando o salário líquido.
-
-var salarioBruto = 7000;
-var impostoRenda = 0.275;
-var salarioLiquido = salarioBruto - (salarioBruto * impostoRenda);
-
-console.log("Salário líquido é de: R$", salarioLiquido.toFixed(2));
-
-// Laço for infinito
-
-for (var i = 0; i++;) {
-  console.log("Esse é um exemplo de trava zap!");
-}
-
 // Simulando uma análise de BPC - Direito Previdenciário
 
 const prompt = require("prompt-sync")();
