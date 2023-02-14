@@ -1,3 +1,3 @@
 Practicing JavaScript: 
 
-Age Rating Management System - Setting up arrays of objects
+Age Rating Management System - I implemented a function to check students' ages.
