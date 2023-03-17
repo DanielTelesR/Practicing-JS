@@ -1,1 +1,1 @@
-Practicing JavaScript: .Map() method
+Practicing JavaScript: .Map() and .sort().
