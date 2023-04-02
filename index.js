@@ -1,12 +1,12 @@
-const http = require('http'); // HTTP module imported
-const porta = 443 // I used the default https setup port.
+const people = [ 
+  'Daniel', 
+  'Jamile', 
+  'Carlos', 
+  'Beca', 
+  'Camila'];
 
-// Server 
+const lastNames = people.map((person) => {
+  return person + ' Santos';
+});
 
-const servidor = http.createServer((req,res) => {
-  res.writeHead(200, {'Content-type':'text/plain'})
-  res.write('Primeiro servidor Node')
-  res.end()
-})
-
-servidor.listen(porta, () =>{console.log('Servidor rodando')});
+console.log(lastNames.join(`\n`));
