@@ -1,6 +1,6 @@
 entrypoint = "index.js"
 
-hidden = [".config"]
+hidden = [".config", "package-lock.json"]
 
 [interpreter]
 command = [
@@ -16,15 +16,15 @@ regex = "Error \\[ERR_REQUIRE_ESM\\]"
 message = "We see that you are using require(...) inside your code. We currently do not support this syntax. Please use 'import' instead when using external modules. (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)"
 
 [nix]
-channel = "stable-22_05"
+channel = "stable-22_11"
 
 [env]
-XDG_CONFIG_HOME = "/home/runner/.config"
+XDG_CONFIG_HOME = "/home/runner/$REPL_SLUG/.config"
 PATH = "/home/runner/$REPL_SLUG/.config/npm/node_global/bin:/home/runner/$REPL_SLUG/node_modules/.bin"
 npm_config_prefix = "/home/runner/$REPL_SLUG/.config/npm/node_global"
 
 [gitHubImport]
-requiredFiles = [".replit", "replit.nix", ".config"]
+requiredFiles = [".replit", "replit.nix", ".config", "package.json", "package-lock.json"]
 
 [packager]
 language = "nodejs"
@@ -84,3 +84,6 @@ pattern = "**/{*.js,*.jsx,*.ts,*.tsx}"
 
 [languages.javascript.languageServer]
 start = "typescript-language-server --stdio"
+
+[deployment]
+run = ["sh", "-c", "node index.js"]
