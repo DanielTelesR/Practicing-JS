@@ -10,3 +10,5 @@ const lastNames = people.map((person) => {
 });
 
 console.log(lastNames.join(`\n`));
+
+lastNames.includes('Daniel Santos') ? console.log('\nDaniel Santos is in the array') : console.log('I have never seen that person!');
